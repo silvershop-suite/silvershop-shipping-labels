@@ -1,5 +1,5 @@
 {
-    "name": "silvershop/shipping-labels",
+    "name": "silvershop-suite/shipping-labels",
     "description": "Carrier-connected shipping label generation for SilverShop: a pluggable provider layer (Manual, MyParcel, …) with single-label creation and printing from the CMS.",
     "type": "silverstripe-vendormodule",
     "keywords": ["silverstripe", "silvershop", "ecommerce", "shipping", "label", "fulfilment", "carrier"],
@@ -28,7 +28,7 @@
         "silverstripe/sqlite3": "^4"
     },
     "suggest": {
-        "silvershop/store-profile": "Central shop identity + sender address, shared with invoicing and other modules."
+        "silvershop-suite/store-profile": "Central shop identity + sender address, shared with invoicing and other modules."
     },
     "extra": {
         "branch-alias": {

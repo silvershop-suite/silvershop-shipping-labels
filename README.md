@@ -16,7 +16,7 @@ provider interface that carriers/aggregators implement, and CMS actions to creat
 - **Settings → Shop → Shipping labels**: the default provider + the shop's **sender / return address**.
 - CMS actions to create and print a label (single label per order; bulk/batch printing is planned).
 
-Carrier adapters ship as separate packages, e.g. **`silvershop/shipping-myparcel`** (MyParcel → PostNL/DHL). Add more
+Carrier adapters ship as separate packages, e.g. **`silvershop-suite/shipping-myparcel`** (MyParcel → PostNL/DHL). Add more
 by implementing `ShippingLabelProvider` and registering it:
 
 ```yaml
@@ -28,7 +28,7 @@ SilverShop\ShippingLabels\Provider\ProviderRegistry:
 ## Installation
 
 ```bash
-composer require silvershop/shipping-labels
+composer require silvershop-suite/shipping-labels
 ```
 
 Then run `dev/build?flush=all`. Provider **API keys come from the environment** (`.env`), never from config/SiteConfig.
