@@ -18,9 +18,9 @@ use SilverStripe\ORM\FieldType\DBHTMLText;
 
 /**
  * Applied to {@link \SilverStripe\SiteConfig\SiteConfig}. Adds a "Shipping labels" area to Settings > Shop: the
- * default provider and (as a fallback) the shop's sender / return address. When silvershop/store-profile is installed
- * the sender comes from the central store profile and these fields are hidden. Secrets (API keys) are NOT stored here
- * — they come from the environment (.env).
+ * default provider and (as a fallback) the shop's sender / return address. When silvershop-suite/store-profile is
+ * installed the sender comes from the central store profile and these fields are hidden. Secrets (API keys) are NOT
+ * stored here — they come from the environment (.env).
  *
  * @property \SilverStripe\SiteConfig\SiteConfig $owner
  * @property string $DefaultShippingProvider
@@ -57,8 +57,8 @@ class ShippingLabelConfigExtension extends Extension
             $providers
         )->setEmptyString(_t(self::class . '.None', '(none)')));
 
-        // The sender address comes from silvershop/store-profile when it is installed; otherwise fall back to our own
-        // fields so the module still works standalone.
+        // The sender address comes from silvershop-suite/store-profile when it is installed; otherwise fall back to our
+        // own fields so the module still works standalone.
         if ($this->usesStoreProfile()) {
             $fields->addFieldToTab($tab, LiteralField::create(
                 'SenderFromProfile',
